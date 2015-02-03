@@ -9,8 +9,17 @@ npm test
 ```
 
 
-## Usage
+## API
 > For more use-cases see the [tests](./test.js)
+
+### [anonymizeIp](./index.js#L39)
+> Anonymize given ip address.
+
+- `<ip>` **{String}** valid ip address  
+- `[mask]` **{String}** symbol to replace with  
+- `return` **{String}**
+
+**Example:**
 
 ```js
 var anonymizeIp = require('anonymize-ip');
