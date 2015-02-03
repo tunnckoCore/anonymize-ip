@@ -15,18 +15,18 @@ npm test
 ```js
 var anonymizeIp = require('anonymize-ip');
 
-anonymizeIp('79.100.175.45');
-//=> 79.100.xxx.xx
+anonymizeIp('79.100.75.145');
+//=> 79.100.xx.xxx
 
 anonymizeIp('231.77.134.6', '*');
 //=> 231.77.***.*
 
 anonymizeIp('129.89.5.243', '_');
 //=> 129.89._.___
+
+anonymizeIp('92.189.231.21', [1,2,3]);
+//=> 92.189.xxx.xx
 ```
-
-
-## API / CLI
 
 
 ## Author
