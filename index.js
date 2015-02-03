@@ -21,7 +21,7 @@ module.exports = function anonymizeIp(ip, mask) {
     throw new Error('[anonymize-ip] expect `ip` be valid ip address');
   }
 
-  mask = mask || 'x';
+  mask = typeof mask === 'string' ? mask : 'x';
 
   var nums = ip.split('.');
   var pre = nums[2].replace(/[0-9]/g, mask);
