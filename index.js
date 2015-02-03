@@ -8,6 +8,7 @@
 'use strict';
 
 var fmt = require('util').format;
+var ipRegex = require('ip-regex');
 
 module.exports = function anonymizeIp(ip, mask) {
   if (!ip) {
@@ -16,6 +17,10 @@ module.exports = function anonymizeIp(ip, mask) {
   if (typeof ip !== 'string') {
     throw new TypeError('[anonymize-ip] expect `ip` be string');
   }
+  if (!ipRegex().test(ip)) {
+    throw new Error('[anonymize-ip] expect `ip` be valid ip address');
+  }
+
   mask = mask || 'x';
 
   var nums = ip.split('.');
