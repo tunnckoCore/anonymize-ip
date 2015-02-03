@@ -21,3 +21,21 @@ mukla('should given `253.110.22.51` be `253.110.xx.xx`')
 
 mukla('should work with custom mask * - `92.189.231.21` be `92.189.***.**` ' )
 .strictEqual(anonymizeIp('92.189.231.21', '*'), '92.189.***.**');
+
+mukla('should mask be `x` if no string given' )
+.strictEqual(anonymizeIp('92.189.231.21', [1,2,3]), '92.189.xxx.xx');
+
+mukla('should throw Error if no arguments')
+.throws(function shouldThrowIfNoArguments() {
+  anonymizeIp();
+}, Error);
+
+mukla('should throw Error no valid ip address given')
+.throws(function shouldThrowIfNoArguments() {
+  anonymizeIp('no valid ip address');
+}, Error);
+
+mukla('should throw TypeError if no arguments')
+.throws(function shouldThrowIfNoString() {
+  anonymizeIp([1,2,3]);
+}, TypeError);
