@@ -15,7 +15,18 @@
     "type": "git",
     "url": "git://github.com/tunnckoCore/anonymize-ip.git"
   },
-  "keywords": [],
+  "keywords": [
+    "anonymize",
+    "anonymous",
+    "hide",
+    "ip",
+    "ips",
+    "mask",
+    "masks",
+    "numbers",
+    "util",
+    "utils"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/anonymize-ip/blob/master/license.md"
