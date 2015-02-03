@@ -1,6 +1,6 @@
 {
   "name": "anonymize-ip",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Hide last ip numbers for given ip, like `129.89.5.243` -> `129.89.x.xxx` or `79.100.175.45` to `79.100.xxx.xx`. Or replace them with custom mask.",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
